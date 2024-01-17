@@ -1,0 +1,15 @@
+on: [workflow_dispatch]
+
+jobs:
+  hallo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print job name
+        run: echo "This is the hallo job"
+
+  bay:
+    needs: hallo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print job name
+        run: echo "This is the bay job"
